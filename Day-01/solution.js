@@ -13,3 +13,22 @@ function logElements(arr){
     }
 }
 logElements(arr);
+
+function logElementsByStack(arr){
+  let stack = [];
+  for(let i = arr.length-1;i>=0;i--){
+      stack.push(arr[i])
+  }
+  while(stack.length>0){
+      let current = stack.pop();
+      if(current instanceof Array){
+          for(let i = current.length-1;i>=0;i--){
+      stack.push(current[i])
+  }
+      }
+      else{
+          console.log(current)
+      }
+  }
+}
+logElementsByStack(arr)
