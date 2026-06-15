@@ -57,3 +57,24 @@ console.log("Largest",largest)
 console.log("Second Largest",secondLargest)
 }
 secondLargest(arr2)
+
+// Question 3 => Sorting based on field in object array.
+
+const arr3 = [
+    {name:"John",age:30},
+    {name:"Alice",age:25},
+    {name:"Bob",age:35},
+    {name:"Eve",age:32}
+]
+
+function sortByField(arr, field) {
+    return arr.sort((a, b) => {
+        if (typeof a[field] === "string") {
+            return a[field].localeCompare(b[field]);
+        }
+        return a[field] - b[field];
+    });
+}
+
+console.log(sortByField(arr3,"age"));
+console.log(sortByField(arr3,"name"));
