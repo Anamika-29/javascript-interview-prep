@@ -1,4 +1,4 @@
-// Write code to log each element in console, one by one, using a loop.
+// Question 1 => Write code to log each element in console, one by one, using a loop.
 
 const arr  = [1,2,3,[4,5,[6,7],8],9,10];
 function logElements(arr){
@@ -12,7 +12,7 @@ function logElements(arr){
         }
     }
 }
-logElements(arr);
+// logElements(arr);
 
 function logElementsByStack(arr){
   let stack = [];
@@ -31,4 +31,29 @@ function logElementsByStack(arr){
       }
   }
 }
-logElementsByStack(arr)
+// logElementsByStack(arr)
+
+// Question 2 => Find the second largest number in the array.
+
+
+
+const arr2 = [1,2,3,4,5,11,7,13,0];
+function secondLargest(arr){
+let largest = -Infinity;
+let secondLargest = -Infinity;
+for(let i = 0; i< arr2.length;i++){
+    if(arr2[i]>largest){
+        secondLargest = largest;
+        largest = arr2[i];
+        
+    } else
+    if(arr2[i]!==largest && arr2[i]>secondLargest){
+        secondLargest = arr2[i]
+    }
+    
+}
+console.log("Largest",largest)
+
+console.log("Second Largest",secondLargest)
+}
+secondLargest(arr2)
