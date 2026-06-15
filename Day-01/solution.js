@@ -27,7 +27,7 @@ function logElementsByStack(arr){
   }
       }
       else{
-          console.log(current)
+          console.log(current,"Number")
       }
   }
 }
